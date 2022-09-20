@@ -43,7 +43,7 @@ export default function ProductDetailsPage({ addToCart }) {
       return false;
     }
 
-    let URL = "http://localhost:4000/api/payment";
+    let URL = "https://caffelatte-api.herokuapp.com/api/payment";
     let sendData = {
       amount: productsDetails.price,
       email: "ekanshgurmon@gmail.com",
@@ -61,7 +61,7 @@ export default function ProductDetailsPage({ addToCart }) {
       image: "../images/assets/apple-icon-120x120.png",
       order_id: order.id,
       handler: async function (response) {
-        let URL = "http://localhost:4000/api/callback";
+        let URL = "https://caffelatte-api.herokuapp.com/api/callback";
         let sendData = {
           payment_id: response.razorpay_payment_id,
           order_id: response.razorpay_order_id,
@@ -91,7 +91,8 @@ export default function ProductDetailsPage({ addToCart }) {
   };
 
   let getProductDetails = async () => {
-    let URL = "http://localhost:4000/api/get-product-by-id/" + params.id;
+    let URL =
+      "https://caffelatte-api.herokuapp.com/api/get-product-by-id/" + params.id;
     try {
       let response = await axios.get(URL);
       let data = response.data;

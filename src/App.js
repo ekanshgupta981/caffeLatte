@@ -18,7 +18,7 @@ function App() {
   };
   let [productsDetails, setProductDetails] = useState([]);
   let getProductDetails = async () => {
-    let URL = "http://localhost:4000/api/get-products";
+    let URL = "https://caffelatte-api.herokuapp.com/api/get-products";
     try {
       let response = await axios.get(URL);
       let { Products, status } = response.data;
