@@ -128,13 +128,6 @@ export default function Cart(props) {
       return pValue + cValue.price * cValue.quantity;
     }, 0);
     setSubTotal(total);
-    let token = localStorage.getItem("Auth_Token_Caffelatee");
-    if (token) {
-      var decoded = jwt_decode(token);
-      setUserLogin(decoded);
-    } else {
-      setUserLogin(null);
-    }
   }, [cartItems]);
   return (
     <>
