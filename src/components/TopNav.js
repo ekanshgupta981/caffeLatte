@@ -80,14 +80,14 @@ export default function TopNav({ cartItems, setAboutUsPage }) {
         <div className="nav-content font-style-poppins">
           <button
             onClick={() => goToHomePage()}
-            className={params === "http://localhost:3000/" ? "text-danger" : ""}
+            className={params === "https://caffelatte-1.netlify.app/" ? "text-danger" : ""}
           >
             <i className="fa fa-home" aria-hidden="true"></i> Home
           </button>
           <button
             onClick={() => AboutUsPage()}
             className={
-              params === "http://localhost:3000/about-us" ? "text-danger" : ""
+              params === "https://caffelatte-1.netlify.app/about-us" ? "text-danger" : ""
             }
           >
             <i className="fa fa-info" aria-hidden="true"></i> About us
@@ -116,7 +116,7 @@ export default function TopNav({ cartItems, setAboutUsPage }) {
           <button
             onClick={() => goToCart()}
             className={
-              params === "http://localhost:3000/cart" ? "text-danger" : ""
+              params === "https://caffelatte-1.netlify.app/cart" ? "text-danger" : ""
             }
           >
             <i
@@ -137,7 +137,7 @@ export default function TopNav({ cartItems, setAboutUsPage }) {
           </button>
           <div
             className={
-              params === "http://localhost:3000/shop"
+              params === "https://caffelatte-1.netlify.app/shop"
                 ? "order-button text-warning"
                 : "order-button"
             }
