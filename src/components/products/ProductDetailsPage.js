@@ -82,7 +82,7 @@ export default function ProductDetailsPage({ addToCart }) {
       },
       prefill: {
         name:"ekansh",
-        email: "ekansh@gmail.com,
+        email: "ekansh@gmail.com",
         contact: "987654321",
       },
     };
