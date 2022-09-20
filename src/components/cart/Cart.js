@@ -68,8 +68,8 @@ export default function Cart(props) {
         }
       },
       prefill: {
-        name: UserLogin.name,
-        email: UserLogin.email,
+        name: "ekansh",
+        email: "ekansh@gmail.com",
         contact: "987654321",
       },
     };
