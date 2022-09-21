@@ -71,7 +71,9 @@ export default function TopNav({ cartItems, setAboutUsPage }) {
   return (
     <>
       <section className="top-nav bg-light border border-bottom">
-        <div className="font-style-pop logo">Caffelatte</div>
+        <div className="font-style-pop logo" onClick={() => goToHomePage()}>
+          Caffelatte
+        </div>
 
         <input type="checkbox" name="" id="click" />
         <label htmlFor="click" className="menu-bar">
@@ -99,7 +101,7 @@ export default function TopNav({ cartItems, setAboutUsPage }) {
               data-bs-toggle="modal"
               data-bs-target="#login"
             >
-              <i className="fa fa-bell" aria-hidden="true"></i> login
+              <i className="fa fa-bell" aria-hidden="true"></i> Login
             </button>
           ) : (
             <div>
@@ -129,7 +131,7 @@ export default function TopNav({ cartItems, setAboutUsPage }) {
                 <span className="visually-hidden">unread messages</span>
               </span>
             )}
-            cart
+            Cart
           </button>
           <button onClick={() => goToContact()}>
             <i className="fa fa-commenting-o" aria-hidden="true"></i>

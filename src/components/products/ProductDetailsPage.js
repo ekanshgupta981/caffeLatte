@@ -81,8 +81,8 @@ export default function ProductDetailsPage({ addToCart }) {
         }
       },
       prefill: {
-        name: UserLogin.name,
-        email: UserLogin.email,
+        name: "Ekansh",
+        email: "Ekansh@gmail.com",
         contact: "987654321",
       },
     };
@@ -107,13 +107,6 @@ export default function ProductDetailsPage({ addToCart }) {
     }
   };
   useEffect(() => {
-    let token = localStorage.getItem("Auth_Token_Caffelatee");
-    if (token) {
-      var decoded = jwt_decode(token);
-      setUserLogin(decoded);
-    } else {
-      setUserLogin(null);
-    }
     getProductDetails();
   }, []);
   return (

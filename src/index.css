@@ -436,7 +436,7 @@ header h1 {
     left: -100%;
     bottom: 0px;
     height: 100rem;
-    width: 55%;
+    width: 75%;
     overflow: hidden;
     background-color: rgb(9, 0, 10);
     z-index: 1000;
@@ -447,8 +447,39 @@ header h1 {
   .product-page-image-sec {
     height: 27rem;
   }
-  /* ==home page== */
 
+  .order-button {
+    background-color: rgb(11, 76, 11);
+    color: white;
+    font-weight: 600;
+    padding: 0.8rem 0rem;
+    margin: 0px 3.5rem;
+    text-align: center;
+    font-size: 1.2rem;
+    border-radius: 1.6rem;
+    cursor: pointer;
+  }
+  /* ==home page== */
+  .story-title {
+    font-size: 2rem;
+    margin-left: 2rem;
+  }
+  .story-image {
+    height: 15rem;
+    width: 40rem;
+    border-radius: 2rem;
+    margin-bottom: 5rem;
+    margin-right: 5rem;
+    margin-left: 1rem;
+  }
+  .story-title-description {
+    font-size: 1rem;
+    margin-left: 2rem;
+  }
+  .Special-button {
+    margin-left: 2rem;
+    font-size: 1rem;
+  }
   .product-details-image {
     width: 24rem;
     height: 20rem;
@@ -502,9 +533,40 @@ header h1 {
 
 @media (max-width: 500px) {
   .story-image {
-    height: 15rem;
-    width: 90rem;
+    height: 10rem;
+    width: 40rem;
     border-radius: 2rem;
     margin-bottom: 5rem;
+    margin-right: 5rem;
+    margin-left: 1rem;
+  }
+  .tray {
+    height: 10rem;
+    position: absolute;
+    z-index: 1;
+    top: 25rem;
+    width: 100%;
+  }
+  .carousel img {
+    width: 7.5rem;
+    height: 6rem;
+    transition: 200ms;
+  }
+  .product-tray {
+    position: absolute;
+    z-index: 100;
+    top: 26.5rem !important;
+  }
+  .story-title {
+    font-size: 1.5rem;
+    margin-left: 2rem;
+  }
+  .story-title-description {
+    font-size: 0.9rem;
+    margin-left: 2rem;
+  }
+  .Special-button {
+    margin-left: 2rem;
+    font-size: 0.9rem;
   }
 }
