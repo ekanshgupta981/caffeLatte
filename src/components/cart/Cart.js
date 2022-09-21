@@ -68,8 +68,13 @@ export default function Cart(props) {
         }
       },
       prefill: {
+<<<<<<< HEAD
         name: "Ekansh",
         email: "Ekansh@gmail.com",
+=======
+        name: "ekansh",
+        email: "ekansh@gmail.com",
+>>>>>>> c431a0e43ee80333260274d5be02eb18a59b59b7
         contact: "987654321",
       },
     };
