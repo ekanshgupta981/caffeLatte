@@ -29,7 +29,6 @@ export default function Login({ success, error }) {
                   <GoogleLogin
                     theme={"filled_black"}
                     shape={"circle"}
-                    width={300}
                     onSuccess={(credentialResponse) => {
                       success(credentialResponse);
                     }}
