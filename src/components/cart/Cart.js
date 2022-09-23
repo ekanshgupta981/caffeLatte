@@ -128,7 +128,7 @@ export default function Cart(props) {
   }, [cartItems]);
   return (
     <>
-      <section className="Cart-section p-lg-5 p-1">
+      <section className="Cart-section overflow-hidden p-lg-5 p-1">
         <div className="w-100 d-flex justify-content-between">
           <div>
             <h5>Shopping Cart</h5>

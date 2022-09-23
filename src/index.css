@@ -378,6 +378,7 @@ header h1 {
   background-repeat: no-repeat;
   background-position: 0%;
   width: 100%;
+  overflow: hidden;
 }
 .about-us-card {
   height: 80vh;
