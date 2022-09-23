@@ -411,17 +411,17 @@ header h1 {
 }
 
 @media (max-width: 1300px) {
-  .nav-content {
+  /* .nav-content {
     max-width: 47rem;
     font-size: 1.1rem;
-  }
+  } */
 }
 
 @media (max-width: 1100px) {
-  .nav-content {
+  /* .nav-content {
     max-width: 44rem;
     font-size: 1rem;
-  }
+  } */
 }
 
 #click {
@@ -430,34 +430,40 @@ header h1 {
 
 @media (max-width: 980px) {
   .nav-content {
-    position: absolute;
-    display: block;
-    top: 91.5px;
-    left: -100%;
-    bottom: 0px;
-    height: 100rem;
-    width: 75%;
-    overflow: hidden;
-    background-color: rgb(9, 0, 10);
-    z-index: 1000;
-    color: white;
-    align-items: center;
-    transition: all 600ms ease-in-out;
+    background: black;
+    border-top: 1px solid white;
+    position: fixed;
+    width: 100% !important;
+    display: flex;
+    height: 3.3rem;
+    justify-content: center;
+    bottom: 0;
+    z-index: 10000;
+    padding: 1rem;
+    justify-content: space-around;
   }
   .product-page-image-sec {
     height: 27rem;
   }
+  .nav-text {
+    display: none;
+  }
 
   .order-button {
-    background-color: rgb(11, 76, 11);
+    background-color: transparent;
     color: white;
     font-weight: 600;
-    padding: 0.8rem 0rem;
-    margin: 0px 3.5rem;
     text-align: center;
     font-size: 1.2rem;
-    border-radius: 1.6rem;
     cursor: pointer;
+    margin: 0%;
+    padding: 0%;
+    margin-top: -1rem;
+  }
+
+  .badges {
+    bottom: 1.2rem;
+    right: 19rem;
   }
   /* ==home page== */
   .story-title {
@@ -485,16 +491,11 @@ header h1 {
     height: 20rem;
   }
   .nav-content button {
-    color: aliceblue;
-    margin: 5rem;
     font-size: 1.5rem;
     padding-bottom: 1rem;
   }
   .shop-page-images {
     height: 23rem;
-  }
-  .nav-content button:hover {
-    color: turquoise;
   }
 
   .logo {
@@ -502,23 +503,13 @@ header h1 {
     font-weight: 500;
     list-style: 1px;
   }
-  .menu-bar {
-    display: block;
-    transition: all 1s ease;
-  }
-  #click:checked ~ .menu-bar {
-    transform: rotate(-360deg);
-  }
-  #click:checked ~ .menu-bar i:before {
-    transition: all 1s ease;
-    content: "\f00d";
-  }
-  #click:checked ~ .nav-content {
-    left: 0;
-  }
 
   i {
     margin: 0rem 0.8rem;
+  }
+  .nav-content i {
+    color: white;
+    margin-top: 1rem;
   }
 }
 .noselect {

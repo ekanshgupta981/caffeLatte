@@ -75,24 +75,32 @@ export default function TopNav({ cartItems, setAboutUsPage }) {
           Caffelatte
         </div>
 
-        <input type="checkbox" name="" id="click" />
-        <label htmlFor="click" className="menu-bar">
+        {/* <input type="checkbox" name="" id="click" /> */}
+        {/* <label htmlFor="click" className="menu-bar">
           <i className="fa fa-bars" aria-hidden="true"></i>
-        </label>
+        </label> */}
         <div className="nav-content font-style-poppins">
           <button
             onClick={() => goToHomePage()}
-            className={params === "https://caffelatte-1.netlify.app/" ? "text-danger" : ""}
+            className={
+              params === "https://caffelatte-1.netlify.app/"
+                ? "text-danger"
+                : ""
+            }
           >
-            <i className="fa fa-home" aria-hidden="true"></i> Home
+            <i className="fa fa-home" aria-hidden="true"></i>{" "}
+            <span className="nav-text"> Home</span>
           </button>
           <button
             onClick={() => AboutUsPage()}
             className={
-              params === "https://caffelatte-1.netlify.app/about-us" ? "text-danger" : ""
+              params === "https://caffelatte-1.netlify.app/about-us"
+                ? "text-danger"
+                : ""
             }
           >
-            <i className="fa fa-info" aria-hidden="true"></i> About us
+            <i className="fa fa-info" aria-hidden="true"></i>{" "}
+            <span className="nav-text">About us</span>
           </button>
 
           {UserLogin === null ? (
@@ -101,7 +109,8 @@ export default function TopNav({ cartItems, setAboutUsPage }) {
               data-bs-toggle="modal"
               data-bs-target="#login"
             >
-              <i className="fa fa-bell" aria-hidden="true"></i> Login
+              <i className="fa fa-bell" aria-hidden="true"></i>{" "}
+              <span className="nav-text">Login</span>
             </button>
           ) : (
             <div>
@@ -109,7 +118,8 @@ export default function TopNav({ cartItems, setAboutUsPage }) {
                 className="btn btn-light ms-2 Logout-icon"
                 onClick={userLogout}
               >
-                Logout
+                <span className="nav-text">Logout</span>
+
                 <i className="ms-2 fa fa-sign-out " aria-hidden="true"></i>
               </button>
             </div>
@@ -118,7 +128,9 @@ export default function TopNav({ cartItems, setAboutUsPage }) {
           <button
             onClick={() => goToCart()}
             className={
-              params === "https://caffelatte-1.netlify.app/cart" ? "text-danger" : ""
+              params === "https://caffelatte-1.netlify.app/cart"
+                ? "text-danger"
+                : ""
             }
           >
             <i
@@ -126,26 +138,27 @@ export default function TopNav({ cartItems, setAboutUsPage }) {
               aria-hidden="true"
             ></i>
             {cartItems.length === 0 ? null : (
-              <span className="position-absolute badge small translate-middle badge rounded-pill bg-danger">
+              <span className="position-absolute badges badge small translate-middle badge rounded-pill bg-danger">
                 {cartItems.length}
                 <span className="visually-hidden">unread messages</span>
               </span>
             )}
-            Cart
+            <span className="nav-text">Cart</span>
           </button>
           <button onClick={() => goToContact()}>
             <i className="fa fa-commenting-o" aria-hidden="true"></i>
-            Contact us
+            <span className="nav-text">Contact us</span>
           </button>
           <div
             className={
               params === "https://caffelatte-1.netlify.app/shop"
-                ? "order-button text-warning"
-                : "order-button"
+                ? "order-button text-warning "
+                : "order-button "
             }
             onClick={() => goToShop()}
           >
-            <i className="fa fa-shopping-bag" aria-hidden="true"></i> Shop
+            <i className="fa fa-shopping-bag" aria-hidden="true"></i>{" "}
+            <span className="nav-text">Shop</span>
           </div>
         </div>
       </section>

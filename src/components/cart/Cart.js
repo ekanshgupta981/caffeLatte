@@ -4,12 +4,10 @@ import Swal from "sweetalert2";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import jwt_decode from "jwt-decode";
 
 export default function Cart(props) {
   let { cartItems, SetCartItems } = props;
   let [subtotal, setSubTotal] = useState([]);
-  let [UserLogin, setUserLogin] = useState([]);
 
   // ======> payment <======= //
   let loadScript = async () => {
@@ -68,10 +66,8 @@ export default function Cart(props) {
         }
       },
       prefill: {
-
         name: "Ekansh",
         email: "Ekansh@gmail.com",
-       
       },
     };
     var paymentObject = new window.Razorpay(options);
