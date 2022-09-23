@@ -9,7 +9,7 @@ export default function TopNav({ cartItems, setAboutUsPage }) {
   let [UserLogin, setUserLogin] = useState(null);
   let userLogout = () => {
     Swal.fire({
-      title: "Are you sure to logout?",
+      title: `${UserLogin.name} Are you sure to logout?`,
       icon: "question",
       showCancelButton: true,
       confirmButtonColor: "#3085d6",
@@ -105,15 +105,15 @@ export default function TopNav({ cartItems, setAboutUsPage }) {
               data-bs-toggle="modal"
               data-bs-target="#login"
             >
-              <i className="fa fa-bell" aria-hidden="true"></i>
-              <span>Login</span>
+              <i class="fa fa-sign-in" aria-hidden="true"></i>
+              <span className="nav-text">Login</span>
             </button>
           ) : (
             <button
               className=" ms-2 Logout-icon login-button"
               onClick={userLogout}
             >
-              <span>{UserLogin.name}</span>
+              <span className="nav-text">{UserLogin.name}</span>
 
               <i className="ms-2 fa fa-sign-out " aria-hidden="true"></i>
             </button>

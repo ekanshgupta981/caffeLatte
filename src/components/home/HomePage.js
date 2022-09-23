@@ -40,7 +40,7 @@ export default function HomePage({ productsDetails }) {
           <div className="Second-bg">
             <div className="blur">
               <section className="d-flex justify-content-around product-section">
-                <div>
+                <div className="hp-sec-bg-icons-section">
                   <div className="homepage-second-bg-icons mb-2 d-flex flex-column justify-content-center align-items-center">
                     <img
                       src="../images/assets/coffee logo.png"
@@ -49,12 +49,8 @@ export default function HomePage({ productsDetails }) {
                     />
                   </div>
                   <h5 className="text-light">AWESOME AROMA</h5>
-                  <p className="text-light">
-                    The coffee is brewed by first <br />
-                    roasting the green coffee beans
-                  </p>
                 </div>
-                <div>
+                <div className="hp-sec-bg-icons-section">
                   <div className="homepage-second-bg-icons mb-2 d-flex flex-column justify-content-center align-items-center">
                     <i
                       class="fa fa-certificate fa-2x text-light "
@@ -62,12 +58,8 @@ export default function HomePage({ productsDetails }) {
                     ></i>
                   </div>
                   <h5 className="text-light">HIGH QUALITY</h5>
-                  <p className="text-light">
-                    The coffee is brewed by first <br />
-                    roasting the green coffee beans
-                  </p>
                 </div>
-                <div>
+                <div className="hp-sec-bg-icons-section">
                   <div className="homepage-second-bg-icons mb-2 d-flex flex-column justify-content-center align-items-center">
                     <i
                       class="fa fa-envira fa-2x text-light "
@@ -75,12 +67,8 @@ export default function HomePage({ productsDetails }) {
                     ></i>
                   </div>
                   <h5 className="text-light">PURE GRADES</h5>
-                  <p className="text-light">
-                    The coffee is brewed by first <br />
-                    roasting the green coffee beans
-                  </p>
                 </div>
-                <div>
+                <div className="hp-sec-bg-icons-section">
                   <div className="homepage-second-bg-icons mb-2 d-flex flex-column justify-content-center align-items-center">
                     <i
                       class="fa fa-free-code-camp fa-2x text-light "
@@ -88,10 +76,6 @@ export default function HomePage({ productsDetails }) {
                     ></i>
                   </div>
                   <h5 className="text-light">PROPER ROASTING</h5>
-                  <p className="text-light">
-                    The coffee is brewed by first <br />
-                    roasting the green coffee beans
-                  </p>
                 </div>
               </section>
 
