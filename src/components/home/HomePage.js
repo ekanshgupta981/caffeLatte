@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import ProductsSlide from "./ProductSlide";
 
@@ -10,6 +10,9 @@ export default function HomePage({ productsDetails }) {
   let goToShop = () => {
     navigate("/shop");
   };
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <section className="col-12 overflow-hidden">

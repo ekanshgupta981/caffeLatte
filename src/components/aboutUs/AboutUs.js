@@ -1,7 +1,10 @@
 import React from "react";
-import { useState } from "react";
+import { useEffect } from "react";
 
 export default function AboutUs({ aboutUsPage, setAboutUsPage }) {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <section className="aboutUs-sec blur-2">

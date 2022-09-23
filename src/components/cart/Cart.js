@@ -119,7 +119,9 @@ export default function Cart(props) {
     newCartItem[index].quantity -= 1;
     SetCartItems(newCartItem);
   };
-
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   useEffect(() => {
     let total = cartItems.reduce((pValue, cValue) => {
       return pValue + cValue.price * cValue.quantity;

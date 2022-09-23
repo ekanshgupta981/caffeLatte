@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Scrollbars from "react-custom-scrollbars-2";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
@@ -7,6 +7,9 @@ import { Link } from "react-router-dom";
 import ShopLoader from "./ShopLoader";
 
 export default function ShopPage({ productsDetails, addToCart, isLoading }) {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       {isLoading ? (

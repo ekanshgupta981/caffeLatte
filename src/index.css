@@ -430,6 +430,23 @@ header h1 {
 }
 
 @media (max-width: 980px) {
+  .logo {
+    border: 1px black solid;
+    padding: 0.3rem 1rem;
+    padding-right: 3.8rem;
+    color: white;
+    background-color: rgb(60, 32, 32);
+    letter-spacing: 1px;
+    border-bottom-right-radius: 35px;
+    border-top-right-radius: 35px;
+    font-size: 1.5rem !important;
+  }
+  .login-button {
+    position: absolute;
+    bottom: 36.7rem !important;
+    right: 0.8rem;
+    font-size: 1.1rem !important;
+  }
   .nav-content {
     background: white;
     border-top: 1px solid black;

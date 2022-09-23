@@ -107,6 +107,9 @@ export default function ProductDetailsPage({ addToCart }) {
     }
   };
   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  useEffect(() => {
     getProductDetails();
   }, []);
   return (

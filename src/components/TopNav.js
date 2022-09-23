@@ -75,10 +75,6 @@ export default function TopNav({ cartItems, setAboutUsPage }) {
           Caffelatte
         </div>
 
-        {/* <input type="checkbox" name="" id="click" /> */}
-        {/* <label htmlFor="click" className="menu-bar">
-          <i className="fa fa-bars" aria-hidden="true"></i>
-        </label> */}
         <div className="nav-content font-style-poppins">
           <button
             onClick={() => goToHomePage()}
@@ -88,7 +84,7 @@ export default function TopNav({ cartItems, setAboutUsPage }) {
                 : ""
             }
           >
-            <i className="fa fa-home" aria-hidden="true"></i>{" "}
+            <i className="fa fa-home" aria-hidden="true"></i>
             <span className="nav-text"> Home</span>
           </button>
           <button
@@ -99,30 +95,28 @@ export default function TopNav({ cartItems, setAboutUsPage }) {
                 : ""
             }
           >
-            <i className="fa fa-info" aria-hidden="true"></i>{" "}
+            <i className="fa fa-info" aria-hidden="true"></i>
             <span className="nav-text">About us</span>
           </button>
 
           {UserLogin === null ? (
             <button
-              className="border-0"
+              className="border-0  login-button"
               data-bs-toggle="modal"
               data-bs-target="#login"
             >
-              <i className="fa fa-bell" aria-hidden="true"></i>{" "}
-              <span className="nav-text">Login</span>
+              <i className="fa fa-bell" aria-hidden="true"></i>
+              <span>Login</span>
             </button>
           ) : (
-            <div>
-              <button
-                className="btn btn-light ms-2 Logout-icon"
-                onClick={userLogout}
-              >
-                <span className="nav-text">Logout</span>
+            <button
+              className=" ms-2 Logout-icon login-button"
+              onClick={userLogout}
+            >
+              <span>{UserLogin.name}</span>
 
-                <i className="ms-2 fa fa-sign-out " aria-hidden="true"></i>
-              </button>
-            </div>
+              <i className="ms-2 fa fa-sign-out " aria-hidden="true"></i>
+            </button>
           )}
 
           <button
@@ -157,7 +151,7 @@ export default function TopNav({ cartItems, setAboutUsPage }) {
             }
             onClick={() => goToShop()}
           >
-            <i className="fa fa-shopping-bag" aria-hidden="true"></i>{" "}
+            <i className="fa fa-shopping-bag" aria-hidden="true"></i>
             <span className="nav-text">Shop</span>
           </div>
         </div>
