@@ -29,12 +29,12 @@ export default function Login({ success, error }) {
                   <GoogleLogin
                     theme={"filled_black"}
                     shape={"circle"}
-                    width={400}
+                    width={300}
                     onSuccess={(credentialResponse) => {
                       success(credentialResponse);
                     }}
                     onError={() => {
-                      error("Login Failed");
+                      error("Login failed");
                     }}
                   />
                 </div>
