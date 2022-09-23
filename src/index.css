@@ -430,15 +430,15 @@ header h1 {
 
 @media (max-width: 980px) {
   .nav-content {
-    background: black;
-    border-top: 1px solid white;
+    background: white;
+    border-top: 1px solid black;
     position: fixed;
     width: 100% !important;
     display: flex;
     height: 3.3rem;
     justify-content: center;
     bottom: 0;
-    z-index: 10000;
+    z-index: 100000;
     padding: 1rem;
     justify-content: space-around;
   }
@@ -451,7 +451,7 @@ header h1 {
 
   .order-button {
     background-color: transparent;
-    color: white;
+    color: black;
     font-weight: 600;
     text-align: center;
     font-size: 1.2rem;
@@ -463,7 +463,7 @@ header h1 {
 
   .badges {
     bottom: 1.2rem;
-    right: 19rem;
+    margin-left: -0.5rem;
   }
   /* ==home page== */
   .story-title {
@@ -508,7 +508,6 @@ header h1 {
     margin: 0rem 0.8rem;
   }
   .nav-content i {
-    color: white;
     margin-top: 1rem;
   }
 }

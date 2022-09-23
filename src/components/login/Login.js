@@ -23,13 +23,13 @@ export default function Login({ success, error }) {
                 aria-label="Close"
               ></button>
             </div>
-            <div className="modal-body">
+            <div className="modal-body d-flex justify-content-center">
               <div className="row justify-content-center">
                 <div className="col-11 d-flex flex-column py-3">
                   <GoogleLogin
                     theme={"filled_black"}
                     shape={"circle"}
-                    width={600}
+                    width={400}
                     onSuccess={(credentialResponse) => {
                       success(credentialResponse);
                     }}
