@@ -32,7 +32,7 @@ export default function ShopPage({ productsDetails, addToCart, isLoading }) {
                               <img
                                 src={`/images/${item.path}`}
                                 alt=""
-                                className="img-fluid card-img-top shop-page-images cursor-pointer"
+                                className="card-img-top shop-page-images cursor-pointer"
                               />
                             ) : (
                               <div className="">

@@ -3,6 +3,7 @@ import axios from "axios";
 import { useParams } from "react-router-dom";
 import Swal from "sweetalert2";
 import jwt_decode from "jwt-decode";
+import ProductLoader from "./ProductLoader";
 
 export default function ProductDetailsPage({ addToCart }) {
   let params = useParams();
@@ -24,6 +25,7 @@ export default function ProductDetailsPage({ addToCart }) {
   });
   let [productImage, setProductImage] = useState(1);
   let [UserLogin, setUserLogin] = useState([]);
+  let [isLoading, setLoading] = useState(false);
 
   let loadScript = async () => {
     const scriptElement = document.createElement("script");
@@ -98,6 +100,7 @@ export default function ProductDetailsPage({ addToCart }) {
       let data = response.data;
       if (data.status === true) {
         setProductDetails({ ...data.result });
+        setLoading(true);
       } else {
         setProductDetails({ ...initProductDetails });
       }
@@ -114,20 +117,20 @@ export default function ProductDetailsPage({ addToCart }) {
   }, []);
   return (
     <>
-      {
+      {isLoading === true ? (
         <section className="d-lg-flex overflow-hidden justify-content-center product-page">
           <div className=" col-lg-5 product-page-image-sec">
             <div className="d-flex justify-content-center product-image">
               {productImage === 1 ? (
                 <img
                   src={`../images/${productsDetails.path}`}
-                  alt="pic not found"
+                  alt="pic is Loading"
                   className="product-details-image"
                 />
               ) : (
                 <img
                   src={`../images/${productImage}`}
-                  alt="pic not found"
+                  alt="pic is Loading"
                   className="product-details-image"
                 />
               )}
@@ -237,7 +240,9 @@ export default function ProductDetailsPage({ addToCart }) {
             </section>
           </div>
         </section>
-      }
+      ) : (
+        <ProductLoader />
+      )}
     </>
   );
 }
