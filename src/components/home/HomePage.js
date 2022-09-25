@@ -39,7 +39,7 @@ export default function HomePage({ productsDetails }) {
           </section>
           <div className="Second-bg">
             <div className="blur">
-              <section className="d-flex justify-content-around product-section">
+              <section className="d-flex justify-content-evenly product-section">
                 <div className="hp-sec-bg-icons-section">
                   <div className="homepage-second-bg-icons mb-2 d-flex flex-column justify-content-center align-items-center">
                     <img

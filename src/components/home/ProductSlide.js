@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
+import React from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { Link } from "react-router-dom";
@@ -59,7 +58,7 @@ export default function ProductSlide({ productsDetails }) {
                       />
                     </abbr>
                   )}
-                  <p className=" fw-bold pb-0 mb-0 ms-2 col-lg-10 home-page-item-name">
+                  <p className=" fw-bold pb-0 mb-0 ms-2 col-10 home-page-item-name">
                     {item.name}
                   </p>
                 </div>

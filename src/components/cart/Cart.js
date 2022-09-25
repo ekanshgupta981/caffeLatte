@@ -150,8 +150,8 @@ export default function Cart(props) {
           </div>
         </div>
         <div className="card card-card shadow">
-          <section className="d-flex h-100">
-            <div className="col-lg-9 col-8">
+          <section className="d-lg-flex h-100">
+            <div className="col-lg-9 h-100 col-12">
               {cartItems.length === 0 ? (
                 <div className="d-flex justify-content-center">
                   <img
@@ -170,13 +170,15 @@ export default function Cart(props) {
                             <abbr title="Click to see product details">
                               <img
                                 src={`../images/${cartItems.path}`}
-                                className="cart-sec-image col-4 cursor-pointer"
+                                className="cart-sec-image img-fluid col-4 cursor-pointer"
                                 alt=""
                               />
                             </abbr>
                           </Link>
                           <div className="col-4">
-                            <h6 className="mb-1">{cartItems.name}</h6>
+                            <h6 className="mb-1 cart-product-name">
+                              {cartItems.name}
+                            </h6>
                             <p className="small text-muted mb-1">
                               100% Organic {cartItems.amount}
                             </p>
@@ -226,9 +228,9 @@ export default function Cart(props) {
                 </Scrollbars>
               )}
             </div>
-            <div className="shadow col-lg-3 col-4 cart-total-sec p-2">
+            <div className="shadow col-lg-3 col-12 bg-light cart-total-sec p-2">
               {cartItems.length === 0 ? (
-                <div className="d-flex flex-column align-items-center justify-content-center">
+                <div className="d-lg-flex flex-lg-column d-none align-items-center justify-content-center">
                   <img
                     src="../images/assets/no-data.jpg"
                     alt=""
@@ -237,25 +239,19 @@ export default function Cart(props) {
                   <h5>Your Cart is Empty</h5>
                 </div>
               ) : (
-                <div className="d-flex  justify-content-evenly mt-5">
+                <div className="d-lg-flex justify-content-lg-evenly d-none mt-lg-5">
                   <div className="d-flex flex-column align-items-center">
-                    <i
-                      class="fa fa-shield fa-5x text-success"
-                      aria-hidden="true"
-                    ></i>
+                    <i class="fa fa-shield text-success" aria-hidden="true"></i>
                     <h6 className="mt-1">Secure Payment</h6>
                   </div>
                   <div className="d-flex flex-column align-items-center">
-                    <i
-                      class="fa fa-truck text-success fa-5x"
-                      aria-hidden="true"
-                    ></i>
+                    <i class="fa fa-truck text-success" aria-hidden="true"></i>
                     <h6 className="mt-1">Fast Delivery</h6>
                   </div>
                 </div>
               )}
               {cartItems.length === 0 ? null : (
-                <div className="d-flex flex-column align-items-center justify-content-center purchase-button border-top border-dark">
+                <div className="d-flex flex-column align-items-center justify-content-center purchase-button pb-lg-0 pb-4 border-top border-dark">
                   <div className="mt-4 d-flex mb-3 align-items-center">
                     <h5 className="me-5">SubTotal:</h5>
                     <h5 className="fw-bold">₹{subtotal}</h5>
