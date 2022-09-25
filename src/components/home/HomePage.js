@@ -39,8 +39,8 @@ export default function HomePage({ productsDetails }) {
           </section>
           <div className="Second-bg">
             <div className="blur">
-              <section className="d-flex justify-content-evenly product-section">
-                <div className="hp-sec-bg-icons-section">
+              <section className="d-flex product-section">
+                <div className="hp-sec-bg-icons-section col-3">
                   <div className="homepage-second-bg-icons mb-2 d-flex flex-column justify-content-center align-items-center">
                     <img
                       src="../images/assets/coffee logo.png"
@@ -50,7 +50,7 @@ export default function HomePage({ productsDetails }) {
                   </div>
                   <h5 className="text-light">AWESOME AROMA</h5>
                 </div>
-                <div className="hp-sec-bg-icons-section">
+                <div className="hp-sec-bg-icons-section col-3">
                   <div className="homepage-second-bg-icons mb-2 d-flex flex-column justify-content-center align-items-center">
                     <i
                       class="fa fa-certificate fa-2x text-light "
@@ -59,7 +59,7 @@ export default function HomePage({ productsDetails }) {
                   </div>
                   <h5 className="text-light">HIGH QUALITY</h5>
                 </div>
-                <div className="hp-sec-bg-icons-section">
+                <div className="hp-sec-bg-icons-section col-3">
                   <div className="homepage-second-bg-icons mb-2 d-flex flex-column justify-content-center align-items-center">
                     <i
                       class="fa fa-envira fa-2x text-light "
@@ -68,7 +68,7 @@ export default function HomePage({ productsDetails }) {
                   </div>
                   <h5 className="text-light">PURE GRADES</h5>
                 </div>
-                <div className="hp-sec-bg-icons-section">
+                <div className="hp-sec-bg-icons-section col-3">
                   <div className="homepage-second-bg-icons mb-2 d-flex flex-column justify-content-center align-items-center">
                     <i
                       class="fa fa-free-code-camp fa-2x text-light "

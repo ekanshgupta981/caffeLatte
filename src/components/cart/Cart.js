@@ -170,19 +170,21 @@ export default function Cart(props) {
                             <abbr title="Click to see product details">
                               <img
                                 src={`../images/${cartItems.path}`}
-                                className="cart-sec-image img-fluid col-4 cursor-pointer"
+                                className="cart-sec-image img-fluid col-lg-4 col-3 cursor-pointer"
                                 alt=""
                               />
                             </abbr>
                           </Link>
-                          <div className="col-4">
+                          <div className="col-lg-4 col-3">
                             <h6 className="mb-1 cart-product-name">
                               {cartItems.name}
                             </h6>
-                            <p className="small text-muted mb-1">
+                            <p className="small text-muted mb-1 cart-product-amount">
                               100% Organic {cartItems.amount}
                             </p>
-                            <h6 className="mt-0 pt-0">₹{cartItems.price}</h6>
+                            <h6 className="mt-0 pt-0 cart-product-price">
+                              ₹{cartItems.price}
+                            </h6>
                           </div>
                           <div className="">
                             {cartItems.quantity === 1 ? (
@@ -228,6 +230,7 @@ export default function Cart(props) {
                 </Scrollbars>
               )}
             </div>
+            {/*============ cart total ========= */}
             <div className="shadow col-lg-3 col-12 bg-light cart-total-sec p-2">
               {cartItems.length === 0 ? (
                 <div className="d-lg-flex flex-lg-column d-none align-items-center justify-content-center">
