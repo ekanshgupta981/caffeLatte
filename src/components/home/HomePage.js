@@ -29,7 +29,6 @@ export default function HomePage({ productsDetails }) {
             </div>
           </header>
         </section>
-        <section className="d-flex w-100 justify-content-center"></section>
         <section>
           <section className="custom-tray d-flex justify-content-center align-content-center h-100">
             <img src="/images/assets/tray.png" alt="" className="tray col-10" />
