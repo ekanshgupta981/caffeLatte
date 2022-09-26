@@ -1,5 +1,6 @@
 import React from "react";
 import { useEffect } from "react";
+import { Scrollbars } from "react-custom-scrollbars-2";
 
 export default function AboutUs({ aboutUsPage, setAboutUsPage }) {
   useEffect(() => {
@@ -10,7 +11,7 @@ export default function AboutUs({ aboutUsPage, setAboutUsPage }) {
       <section className="aboutUs-sec blur-2">
         <div className="blur">
           <div className="d-flex justify-content-center">
-            <div className="col-lg-9 col-11 about-us-card">
+            <div className="col-lg-9 col-11 about-us-card overflow-hidden">
               <div className="d-flex mt-5 ms-2 border-bottom border-light col-8 pb-2">
                 <h5
                   className={
@@ -49,16 +50,33 @@ export default function AboutUs({ aboutUsPage, setAboutUsPage }) {
                   Follow Us
                 </h5>
               </div>
-              <div className="about-us-content overflow-hidden">
+              <div className="about-us-content">
                 {/* === Who We Are === */}
                 {aboutUsPage === 1 ? (
-                  <h2 className="text-light aboutUs-Card-whoWeAre-text col-7 mt-3 ms-3">
-                    Our incredibly rate come from humble beginning in brazil
-                    where decades of political turmoil once forced local farmers
-                    to start growing khat, a narcotic native to the Arabian
-                    peninsula. Since That Day we are selling coffee and now we
-                    have over 1000 branch all over the world..
-                  </h2>
+                  <Scrollbars>
+                    <h2 className="text-light aboutUs-Card-whoWeAre-text col-7 mt-3 ms-3">
+                      Our incredibly rate come from humble beginning in brazil
+                      where decades of political turmoil once forced local
+                      farmers to start growing khat, a narcotic native to the
+                      Arabian peninsula. Since That Day we are selling coffee
+                      and now we have over 1000 branch all over the world.. Our
+                      incredibly rate come from humble beginning in brazil where
+                      decades of political turmoil once forced local farmers to
+                      start growing khat, a narcotic native to the Arabian
+                      peninsula. Since That Day we are selling coffee and now we
+                      have over 1000 branch all over the world.. Our incredibly
+                      rate come from humble beginning in brazil where decades of
+                      political turmoil once forced local farmers to start
+                      growing khat, a narcotic native to the Arabian peninsula.
+                      Since That Day we are selling coffee and now we have over
+                      1000 branch all over the world.. Our incredibly rate come
+                      from humble beginning in brazil where decades of political
+                      turmoil once forced local farmers to start growing khat, a
+                      narcotic native to the Arabian peninsula. Since That Day
+                      we are selling coffee and now we have over 1000 branch all
+                      over the world..
+                    </h2>
+                  </Scrollbars>
                 ) : (
                   []
                 )}
@@ -104,7 +122,7 @@ export default function AboutUs({ aboutUsPage, setAboutUsPage }) {
                   []
                 )}
               </div>
-              <div className="text-light position-absolute about-us-cafe-logo">
+              <div className="text-light d-flex justify-content-end pe-5">
                 <h4 className="font-style-pop display-4">CaffeLatte</h4>
               </div>
             </div>

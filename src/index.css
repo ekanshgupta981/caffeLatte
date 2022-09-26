@@ -395,7 +395,7 @@ header h1 {
   overflow: hidden;
 }
 .about-us-card {
-  height: 80vh;
+  height: 35rem;
   background-image: url("../public/images/assets/about-us-card.jpg");
   background-position: top;
   background-size: cover;
@@ -407,9 +407,7 @@ header h1 {
 .about-us-content {
   height: 24rem;
 }
-.about-us-cafe-logo {
-  margin-left: 55rem;
-}
+
 .partners-image {
   height: 15rem;
   width: 39rem;
@@ -564,7 +562,7 @@ header h1 {
     height: 25rem;
   }
   .about-us-card {
-    height: 50vh;
+    height: 20rem;
   }
   .aboutUs-Card-whoWeAre-text {
     font-size: 1rem;
@@ -573,10 +571,6 @@ header h1 {
   .partners-image {
     height: 6rem;
     width: 15rem;
-  }
-  .about-us-cafe-logo {
-    margin-left: 16rem;
-    bottom: 3.4rem;
   }
 }
 .noselect {
