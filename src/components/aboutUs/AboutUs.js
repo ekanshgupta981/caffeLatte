@@ -15,8 +15,8 @@ export default function AboutUs({ aboutUsPage, setAboutUsPage }) {
                 <h5
                   className={
                     aboutUsPage === 1
-                      ? "text-danger mx-3 cursor-pointer"
-                      : "text-light mx-3 cursor-pointer"
+                      ? "text-danger mx-lg-3 mx-1 cursor-pointer aboutUs-card-nav-text"
+                      : "text-light mx-lg-3 mx-1 cursor-pointer aboutUs-card-nav-text"
                   }
                   onClick={() => setAboutUsPage(1)}
                 >
@@ -25,8 +25,8 @@ export default function AboutUs({ aboutUsPage, setAboutUsPage }) {
                 <h5
                   className={
                     aboutUsPage === 2
-                      ? "text-danger mx-3 cursor-pointer"
-                      : "text-light mx-3 cursor-pointer"
+                      ? "text-danger mx-lg-3 mx-1 cursor-pointer aboutUs-card-nav-text"
+                      : "text-light mx-lg-3 mx-1 cursor-pointer aboutUs-card-nav-text"
                   }
                   onClick={() => setAboutUsPage(2)}
                 >
@@ -35,15 +35,15 @@ export default function AboutUs({ aboutUsPage, setAboutUsPage }) {
                 <h5
                   className={
                     aboutUsPage === 3
-                      ? "text-danger mx-3 cursor-pointer"
-                      : "text-light mx-3 cursor-pointer"
+                      ? "text-danger mx-lg-3 mx-1 cursor-pointer aboutUs-card-nav-text"
+                      : "text-light mx-lg-3 mx-1 cursor-pointer aboutUs-card-nav-text"
                   }
                   onClick={() => setAboutUsPage(3)}
                 >
                   Contact Info
                 </h5>
                 <h5
-                  className="text-light mx-3 cursor-pointer"
+                  className="text-light mx-lg-3 mx-1 cursor-pointer aboutUs-card-nav-text"
                   onClick={() => setAboutUsPage(4)}
                 >
                   Follow Us
@@ -52,7 +52,7 @@ export default function AboutUs({ aboutUsPage, setAboutUsPage }) {
               <div className="about-us-content overflow-hidden">
                 {/* === Who We Are === */}
                 {aboutUsPage === 1 ? (
-                  <h2 className="text-light col-7 mt-3 ms-3">
+                  <h2 className="text-light aboutUs-Card-whoWeAre-text col-7 mt-3 ms-3">
                     Our incredibly rate come from humble beginning in brazil
                     where decades of political turmoil once forced local farmers
                     to start growing khat, a narcotic native to the Arabian
@@ -64,7 +64,7 @@ export default function AboutUs({ aboutUsPage, setAboutUsPage }) {
                 )}
                 {aboutUsPage === 2 ? (
                   <div className="d-flex justify-content-center flex-column align-items-center col-7">
-                    <span className="border-bottom border-light col-5 d-flex justify-content-center">
+                    <span className="border-bottom border-light col-lg-5 col-6 d-flex justify-content-center">
                       <h4 className="text-light mt-4 ">Our Partners</h4>
                     </span>
                     <img
@@ -104,7 +104,7 @@ export default function AboutUs({ aboutUsPage, setAboutUsPage }) {
                   []
                 )}
               </div>
-              <div className="text-light about-us-cafe-logo">
+              <div className="text-light position-absolute about-us-cafe-logo">
                 <h4 className="font-style-pop display-4">CaffeLatte</h4>
               </div>
             </div>

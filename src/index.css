@@ -408,7 +408,7 @@ header h1 {
   height: 24rem;
 }
 .about-us-cafe-logo {
-  margin-left: 75%;
+  margin-left: 55rem;
 }
 .partners-image {
   height: 15rem;
@@ -555,6 +555,28 @@ header h1 {
   }
   .nav-content i {
     margin-top: 1rem;
+  }
+  /* about us */
+  .aboutUs-card-nav-text {
+    font-size: 0.7rem;
+  }
+  .aboutUs-sec {
+    height: 25rem;
+  }
+  .about-us-card {
+    height: 50vh;
+  }
+  .aboutUs-Card-whoWeAre-text {
+    font-size: 1rem;
+  }
+
+  .partners-image {
+    height: 6rem;
+    width: 15rem;
+  }
+  .about-us-cafe-logo {
+    margin-left: 16rem;
+    bottom: 3.4rem;
   }
 }
 .noselect {
