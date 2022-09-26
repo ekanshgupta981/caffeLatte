@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import Swal from "sweetalert2";
-import jwt_decode from "jwt-decode";
 import ProductLoader from "./ProductLoader";
 
 export default function ProductDetailsPage({ addToCart }) {
@@ -24,7 +23,6 @@ export default function ProductDetailsPage({ addToCart }) {
     ...initProductDetails,
   });
   let [productImage, setProductImage] = useState(1);
-  let [UserLogin, setUserLogin] = useState([]);
   let [isLoading, setLoading] = useState(false);
 
   let loadScript = async () => {
