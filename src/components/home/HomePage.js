@@ -92,7 +92,7 @@ export default function HomePage({ productsDetails }) {
                   <h1 className="display-4 story-title fw-bold ms-lg-5 text-shadow">
                     Best Coffee House In Your Home Town
                   </h1>
-                  <h4 className=" ms-lg-5 story-title-description col-lg-10 stroke">
+                  <h4 className=" ms-lg-5 story-title-description col-10">
                     Our incredibly rate come from humble beginning in brazil
                     where decades of political turmoil once forced local farmers
                     to start growing khat, a narcotic native to the Arabian
