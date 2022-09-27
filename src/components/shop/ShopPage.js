@@ -122,9 +122,6 @@ export default function ShopPage({ productsDetails, addToCart, isLoading }) {
               </div>
             </div>
           </div>
-          {/* <div className="d-flex justify-content-center position-fixed popup col-12 text-center">
-            <h5 className="col-2 bg-dark text-light fw-bold p-3">clicked</h5>
-          </div> */}
         </section>
       ) : (
         <ShopLoader />

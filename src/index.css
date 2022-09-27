@@ -248,6 +248,8 @@ header h1 {
 
 .Special-button-2:active {
   box-shadow: none !important;
+  background-color: transparent;
+  color: black;
 }
 
 /* ====carousel home page ===== */
