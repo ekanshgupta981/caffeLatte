@@ -2,6 +2,8 @@ import React, { useEffect } from "react";
 import Scrollbars from "react-custom-scrollbars-2";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 import { Link } from "react-router-dom";
 import ShopLoader from "./ShopLoader";
@@ -13,7 +15,7 @@ export default function ShopPage({ productsDetails, addToCart, isLoading }) {
   return (
     <>
       {isLoading ? (
-        <section className="  pt-5">
+        <section className="pt-5">
           <div className="container-fluid">
             <div className="px-lg-5">
               <div className="row">
@@ -92,6 +94,17 @@ export default function ShopPage({ productsDetails, addToCart, isLoading }) {
                                   className=" Special-button-2 px-4 py-1 font-weight-bold"
                                   onClick={() => addToCart(item)}
                                 >
+                                  <ToastContainer
+                                    position="top-center"
+                                    autoClose={3000}
+                                    hideProgressBar
+                                    newestOnTop={false}
+                                    closeOnClick
+                                    rtl={false}
+                                    pauseOnFocusLoss
+                                    draggable
+                                    pauseOnHover
+                                  />
                                   Add To Cart
                                 </button>
                               </p>
@@ -109,6 +122,9 @@ export default function ShopPage({ productsDetails, addToCart, isLoading }) {
               </div>
             </div>
           </div>
+          {/* <div className="d-flex justify-content-center position-fixed popup col-12 text-center">
+            <h5 className="col-2 bg-dark text-light fw-bold p-3">clicked</h5>
+          </div> */}
         </section>
       ) : (
         <ShopLoader />

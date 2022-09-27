@@ -8,6 +8,7 @@ import { useState, useEffect } from "react";
 import AboutUs from "./components/aboutUs/AboutUs";
 import ShopPage from "./components/shop/ShopPage";
 import axios from "axios";
+import { toast } from "react-toastify";
 function App() {
   let [cartItems, SetCartItems] = useState([]);
   let [aboutUsPage, setAboutUsPage] = useState(1);
@@ -20,8 +21,28 @@ function App() {
     // here undefined means if it already exist.
     if (newItem !== undefined) {
       newItem.quantity += 1;
+      toast.success(`you have ${newItem.quantity} ${items.name} in Cart !`, {
+        position: "top-center",
+        autoClose: 3000,
+        hideProgressBar: true,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+      });
       SetCartItems([...cartItems]); // if it exist then print as it is.
     } else {
+      toast.success(`${items.name} added To Cart !`, {
+        position: "top-center",
+        autoClose: 3000,
+        hideProgressBar: true,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+      });
       SetCartItems([...cartItems, items]);
     }
   };

@@ -3,6 +3,7 @@ import axios from "axios";
 import { useParams } from "react-router-dom";
 import Swal from "sweetalert2";
 import ProductLoader from "./ProductLoader";
+import { ToastContainer } from "react-toastify";
 
 export default function ProductDetailsPage({ addToCart }) {
   let params = useParams();
@@ -178,6 +179,17 @@ export default function ProductDetailsPage({ addToCart }) {
                     className="btn btn-outline-dark fw-bold mt-4 py-2"
                     onClick={() => addToCart(productsDetails)}
                   >
+                    <ToastContainer
+                      position="top-center"
+                      autoClose={5000}
+                      hideProgressBar
+                      newestOnTop={false}
+                      closeOnClick
+                      rtl={false}
+                      pauseOnFocusLoss
+                      draggable
+                      pauseOnHover
+                    />
                     Add To Cart
                   </button>
                   <button
