@@ -59,22 +59,7 @@ export default function AboutUs({ aboutUsPage, setAboutUsPage }) {
                       where decades of political turmoil once forced local
                       farmers to start growing khat, a narcotic native to the
                       Arabian peninsula. Since That Day we are selling coffee
-                      and now we have over 1000 branch all over the world.. Our
-                      incredibly rate come from humble beginning in brazil where
-                      decades of political turmoil once forced local farmers to
-                      start growing khat, a narcotic native to the Arabian
-                      peninsula. Since That Day we are selling coffee and now we
-                      have over 1000 branch all over the world.. Our incredibly
-                      rate come from humble beginning in brazil where decades of
-                      political turmoil once forced local farmers to start
-                      growing khat, a narcotic native to the Arabian peninsula.
-                      Since That Day we are selling coffee and now we have over
-                      1000 branch all over the world.. Our incredibly rate come
-                      from humble beginning in brazil where decades of political
-                      turmoil once forced local farmers to start growing khat, a
-                      narcotic native to the Arabian peninsula. Since That Day
-                      we are selling coffee and now we have over 1000 branch all
-                      over the world..
+                      and now we have over 1000 branch all over the world..
                     </h2>
                   </Scrollbars>
                 ) : (

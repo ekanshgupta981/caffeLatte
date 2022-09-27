@@ -105,7 +105,7 @@ export default function TopNav({ cartItems, setAboutUsPage }) {
               data-bs-toggle="modal"
               data-bs-target="#login"
             >
-              <i class="fa fa-sign-in" aria-hidden="true"></i>
+              <i className="fa fa-sign-in" aria-hidden="true"></i>
               <span className="nav-text">Login</span>
             </button>
           ) : (

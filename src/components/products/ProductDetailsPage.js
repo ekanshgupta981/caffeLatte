@@ -198,11 +198,13 @@ export default function ProductDetailsPage({ addToCart }) {
               >
                 <p>Ingredient</p>
                 <p>
-                  <i class="fa fa-plus" aria-hidden="true"></i>
+                  <i className="fa fa-plus" aria-hidden="true"></i>
                 </p>
               </div>
-              <div class="collapse col-11" id="ingredient">
-                <div class="card card-body">{productsDetails.ingredient}</div>
+              <div className="collapse col-11" id="ingredient">
+                <div className="card card-body">
+                  {productsDetails.ingredient}
+                </div>
               </div>
               <div
                 className="d-flex justify-content-between col-11 mt-1 cursor-pointer fw-bold"
@@ -214,11 +216,11 @@ export default function ProductDetailsPage({ addToCart }) {
               >
                 <p>Nutritional Information</p>
                 <p>
-                  <i class="fa fa-plus" aria-hidden="true"></i>
+                  <i className="fa fa-plus" aria-hidden="true"></i>
                 </p>
               </div>
-              <div class="collapse col-11" id="Nutritional">
-                <div class="card card-body">
+              <div className="collapse col-11" id="Nutritional">
+                <div className="card card-body">
                   <ul className="d-flex justify-content-between flex-wrap w-100">
                     <li className="w-50 fw-bold">
                       fat: {productsDetails.nutrition_value.fat}

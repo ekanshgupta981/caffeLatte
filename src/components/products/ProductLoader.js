@@ -15,18 +15,18 @@ export default function ProductLoader() {
           <div className="d-flex justify-content-center position-sticky thumb-section">
             {/* ========> Thumb Images <============ */}
             <div className="mx-4">
-              <div class="spinner-grow text-secondary" role="status">
-                <span class="visually-hidden">Loading...</span>
+              <div className="spinner-grow text-secondary" role="status">
+                <span className="visually-hidden">Loading...</span>
               </div>
             </div>
             <div className="mx-4">
-              <div class="spinner-grow text-secondary" role="status">
-                <span class="visually-hidden">Loading...</span>
+              <div className="spinner-grow text-secondary" role="status">
+                <span className="visually-hidden">Loading...</span>
               </div>
             </div>
             <div className="mx-4">
-              <div class="spinner-grow text-secondary" role="status">
-                <span class="visually-hidden">Loading...</span>
+              <div className="spinner-grow text-secondary" role="status">
+                <span className="visually-hidden">Loading...</span>
               </div>
             </div>
           </div>

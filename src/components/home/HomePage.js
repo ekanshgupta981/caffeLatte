@@ -52,7 +52,7 @@ export default function HomePage({ productsDetails }) {
                 <div className="hp-sec-bg-icons-section col-3">
                   <div className="homepage-second-bg-icons mb-2 d-flex flex-column justify-content-center align-items-center">
                     <i
-                      class="fa fa-certificate fa-2x text-light "
+                      className="fa fa-certificate fa-2x text-light "
                       aria-hidden="true"
                     ></i>
                   </div>
@@ -61,7 +61,7 @@ export default function HomePage({ productsDetails }) {
                 <div className="hp-sec-bg-icons-section col-3">
                   <div className="homepage-second-bg-icons mb-2 d-flex flex-column justify-content-center align-items-center">
                     <i
-                      class="fa fa-envira fa-2x text-light "
+                      className="fa fa-envira fa-2x text-light "
                       aria-hidden="true"
                     ></i>
                   </div>
@@ -70,7 +70,7 @@ export default function HomePage({ productsDetails }) {
                 <div className="hp-sec-bg-icons-section col-3">
                   <div className="homepage-second-bg-icons mb-2 d-flex flex-column justify-content-center align-items-center">
                     <i
-                      class="fa fa-free-code-camp fa-2x text-light "
+                      className="fa fa-free-code-camp fa-2x text-light "
                       aria-hidden="true"
                     ></i>
                   </div>

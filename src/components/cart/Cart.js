@@ -244,11 +244,17 @@ export default function Cart(props) {
               ) : (
                 <div className="d-lg-flex justify-content-lg-evenly d-none mt-lg-5">
                   <div className="d-flex flex-column align-items-center">
-                    <i class="fa fa-shield text-success" aria-hidden="true"></i>
+                    <i
+                      className="fa fa-shield text-success"
+                      aria-hidden="true"
+                    ></i>
                     <h6 className="mt-1">Secure Payment</h6>
                   </div>
                   <div className="d-flex flex-column align-items-center">
-                    <i class="fa fa-truck text-success" aria-hidden="true"></i>
+                    <i
+                      className="fa fa-truck text-success"
+                      aria-hidden="true"
+                    ></i>
                     <h6 className="mt-1">Fast Delivery</h6>
                   </div>
                 </div>

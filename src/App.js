@@ -14,7 +14,16 @@ function App() {
   let [isLoading, setLoading] = useState(false);
 
   let addToCart = (items) => {
-    SetCartItems([...cartItems, items]);
+    let newItem = cartItems.find((previousItem) => {
+      return previousItem._id === items._id;
+    });
+    // here undefined means if it already exist.
+    if (newItem !== undefined) {
+      newItem.quantity += 1;
+      SetCartItems([...cartItems]); // if it exist then print as it is.
+    } else {
+      SetCartItems([...cartItems, items]);
+    }
   };
   let [productsDetails, setProductDetails] = useState([]);
   let getProductDetails = async () => {
