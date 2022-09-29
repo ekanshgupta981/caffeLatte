@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import ProductsSlide from "./ProductSlide";
 
-export default function HomePage({ productsDetails }) {
+export default function HomePage({ productsDetails, isLoading }) {
   let navigate = useNavigate();
   let AboutUsPage = () => {
     navigate("/about-us");
@@ -34,7 +34,10 @@ export default function HomePage({ productsDetails }) {
             <img src="/images/assets/tray.png" alt="" className="tray col-10" />
           </section>
           <section className="product-tray d-flex justify-content-center w-100">
-            <ProductsSlide productsDetails={productsDetails} />
+            <ProductsSlide
+              isLoading={isLoading}
+              productsDetails={productsDetails}
+            />
           </section>
           <div className="Second-bg">
             <div className="blur">

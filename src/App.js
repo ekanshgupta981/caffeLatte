@@ -72,7 +72,9 @@ function App() {
       <Routes>
         <Route
           path="/"
-          element={<HomePage productsDetails={productsDetails} />}
+          element={
+            <HomePage productsDetails={productsDetails} isLoading={isLoading} />
+          }
         />
         <Route
           path="/about-us"
