@@ -195,6 +195,9 @@ header h1 {
   border-radius: 10px;
   box-shadow: 0px 0px 4rem rgba(128, 128, 128, 0.456);
 }
+.homepage-second-bg-icons:hover {
+  box-shadow: 0px 0px 4rem 1rem rgba(128, 128, 128, 0.456);
+}
 
 .hp-sec-bg-icons-section {
   display: flex;
