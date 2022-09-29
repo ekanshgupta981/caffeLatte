@@ -4,6 +4,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Link } from "react-router-dom";
 import ShopLoader from "./ShopLoader";
+import FilterBar from "./FilterBar";
 
 export default function ShopPage({ productsDetails, addToCart, isLoading }) {
   useEffect(() => {
@@ -11,6 +12,7 @@ export default function ShopPage({ productsDetails, addToCart, isLoading }) {
   }, []);
   return (
     <>
+      <FilterBar productsDetails={productsDetails} />
       {isLoading ? (
         <section className="pt-5">
           <div className="container-fluid">
