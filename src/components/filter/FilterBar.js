@@ -3,12 +3,28 @@ import { Link } from "react-router-dom";
 import FilterCat from "./FilterCat";
 import FilterPriceRange from "./FilterPriceRange";
 
-export default function FilterBar({ filterProducts }) {
+export default function FilterBar({ filterProducts, filter }) {
   let [text, setText] = useState("");
   let [filterToggle, setFilterToggle] = useState(true);
   let [apply, setApply] = useState();
-  let [veg, setVeg] = useState(true);
-  let [NonVeg, setNonVeg] = useState(true);
+  let [veg, setVegState] = useState("");
+  let [NonVeg, setNonVegState] = useState("");
+
+  let setVeg = () => {
+    setVegState("veg");
+    setNonVegState("");
+  };
+
+  let setNonVeg = () => {
+    setNonVegState("non-veg");
+    setVegState("");
+  };
+  if (veg === "veg") {
+    filter["hallmarks"] = veg;
+  }
+  if (NonVeg === "non-veg") {
+    filter["hallmarks"] = NonVeg;
+  }
 
   let getText = (event) => {
     setText(event.target.value);
@@ -167,10 +183,10 @@ export default function FilterBar({ filterProducts }) {
               </form>
               {/* ==== FIlter map === */}
               <div>
-                {veg === true ? (
+                {veg === "" ? (
                   <button
                     className="btn btn-light fw-bold px-3 mt-2 mx-2 d-flex"
-                    onClick={() => setVeg(false)}
+                    onClick={() => setVeg()}
                   >
                     <div className="mx-2">Veg</div>
                     <div>
@@ -184,7 +200,7 @@ export default function FilterBar({ filterProducts }) {
                 ) : (
                   <button
                     className="btn btn-success fw-bold px-3 mt-2 mx-2 d-flex"
-                    onClick={() => setVeg(true)}
+                    onClick={() => setVegState("")}
                   >
                     <div className="mx-2">Veg</div>
                     <div>
@@ -194,10 +210,10 @@ export default function FilterBar({ filterProducts }) {
                 )}
               </div>
               <div>
-                {NonVeg === true ? (
+                {NonVeg === "" ? (
                   <button
                     className="btn btn-light fw-bold px-3 mt-2 mx-2 d-flex"
-                    onClick={() => setNonVeg(false)}
+                    onClick={() => setNonVeg()}
                   >
                     <div className="mx-2">Non-Veg</div>
                     <div>
@@ -211,7 +227,7 @@ export default function FilterBar({ filterProducts }) {
                 ) : (
                   <button
                     className="btn btn-danger fw-bold px-3 mt-2 mx-2 d-flex"
-                    onClick={() => setNonVeg(true)}
+                    onClick={() => setNonVegState("")}
                   >
                     <div className="mx-2">Non-Veg</div>
                     <div>

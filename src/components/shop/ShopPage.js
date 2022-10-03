@@ -9,10 +9,12 @@ import axios from "axios";
 
 export default function ShopPage({ setLoading, addToCart, isLoading }) {
   let [filterProducts, setFilterProducts] = useState([]);
+  let filter = {};
+  console.log(filter);
   let getFilterProductDetails = async () => {
     let URL = "https://caffelatte-api.herokuapp.com/api/filter";
     try {
-      let response = await axios.post(URL);
+      let response = await axios.post(URL, filter);
       let { result, status } = response.data;
       if (status) {
         setFilterProducts([...result]);
@@ -27,12 +29,14 @@ export default function ShopPage({ setLoading, addToCart, isLoading }) {
   };
   useEffect(() => {
     getFilterProductDetails();
+  }, [filter]);
+  useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
   return (
     <>
-      <FilterBar filterProducts={filterProducts} />
+      <FilterBar filterProducts={filterProducts} filter={filter} />
       {isLoading ? (
         <section className="pt-5">
           <div className="container-fluid">
