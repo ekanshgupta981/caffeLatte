@@ -13,6 +13,7 @@ function App() {
   let [cartItems, SetCartItems] = useState([]);
   let [aboutUsPage, setAboutUsPage] = useState(1);
   let [isLoading, setLoading] = useState(false);
+  let [productsDetails, setProductDetails] = useState([]);
 
   let addToCart = (items) => {
     let newItem = cartItems.find((previousItem) => {
@@ -46,7 +47,6 @@ function App() {
       SetCartItems([...cartItems, items]);
     }
   };
-  let [productsDetails, setProductDetails] = useState([]);
   let getProductDetails = async () => {
     let URL = "https://caffelatte-api.herokuapp.com/api/get-products";
     try {
@@ -63,6 +63,7 @@ function App() {
       console.log(error);
     }
   };
+
   useEffect(() => {
     getProductDetails();
   }, []);
@@ -97,9 +98,9 @@ function App() {
           path="/Shop"
           element={
             <ShopPage
-              productsDetails={productsDetails}
               addToCart={addToCart}
               isLoading={isLoading}
+              setLoading={setLoading}
             />
           }
         />

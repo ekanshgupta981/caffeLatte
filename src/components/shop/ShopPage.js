@@ -1,18 +1,38 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Scrollbars from "react-custom-scrollbars-2";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Link } from "react-router-dom";
 import ShopLoader from "./ShopLoader";
-import FilterBar from "./FilterBar";
+import FilterBar from "../filter/FilterBar";
+import axios from "axios";
 
-export default function ShopPage({ productsDetails, addToCart, isLoading }) {
+export default function ShopPage({ setLoading, addToCart, isLoading }) {
+  let [filterProducts, setFilterProducts] = useState([]);
+  let getFilterProductDetails = async () => {
+    let URL = "https://caffelatte-api.herokuapp.com/api/filter";
+    try {
+      let response = await axios.post(URL);
+      let { result, status } = response.data;
+      if (status) {
+        setFilterProducts([...result]);
+        setLoading(true);
+      } else {
+        alert("unable to get filter item");
+      }
+    } catch (error) {
+      alert(error);
+      console.log(error);
+    }
+  };
   useEffect(() => {
+    getFilterProductDetails();
     window.scrollTo(0, 0);
   }, []);
+
   return (
     <>
-      <FilterBar productsDetails={productsDetails} />
+      <FilterBar filterProducts={filterProducts} />
       {isLoading ? (
         <section className="pt-5">
           <div className="container-fluid">
@@ -20,7 +40,7 @@ export default function ShopPage({ productsDetails, addToCart, isLoading }) {
               <div className="row">
                 {/* ====> food Items <======== */}
 
-                {productsDetails.map((item, index) => {
+                {filterProducts.map((item, index) => {
                   return (
                     <div
                       className="col-xl-3 col-lg-4 col-md-6 mb-4"

@@ -295,6 +295,9 @@ header h1 {
   width: 0.9rem !important;
 }
 
+/* .list-unstyled li {
+} */
+
 .custom-footer {
   height: 51%;
   background-color: black;
@@ -472,6 +475,45 @@ ul {
 .li-img {
   height: 3rem;
   width: 4rem;
+}
+
+/* ==================== filter ==================== */
+.shop-filter-modal {
+  height: 20rem;
+}
+.filter-ul {
+  list-style: none;
+}
+
+.filter-ul input[type="radio"]::after {
+  border-radius: 11px;
+  width: 12px;
+  height: 12px;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  content: " ";
+  display: block;
+}
+.filter-ul input[type="radio"]:checked::after {
+  border-radius: 11px;
+  width: 12px;
+  height: 12px;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  content: " ";
+  display: block;
+  background: rgb(248, 52, 52);
+}
+
+.filter-ul label:hover {
+  color: rgb(255, 92, 92);
+}
+
+.form-check-input:checked {
+  border: 2px solid white;
+  background-color: rgb(242, 92, 92);
 }
 
 @media (max-width: 980px) {
