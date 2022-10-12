@@ -179,19 +179,19 @@ export default function ProductDetailsPage({ addToCart }) {
                     className="btn btn-outline-dark fw-bold mt-4 py-2"
                     onClick={() => addToCart(productsDetails)}
                   >
-                    <ToastContainer
-                      position="top-center"
-                      autoClose={5000}
-                      hideProgressBar
-                      newestOnTop={false}
-                      closeOnClick
-                      rtl={false}
-                      pauseOnFocusLoss
-                      draggable
-                      pauseOnHover
-                    />
                     Add To Cart
                   </button>
+                  <ToastContainer
+                    position="top-center"
+                    autoClose={5000}
+                    hideProgressBar
+                    newestOnTop={false}
+                    closeOnClick
+                    rtl={false}
+                    pauseOnFocusLoss
+                    draggable
+                    pauseOnHover
+                  />
                   <button
                     className="btn btn-outline-dark fw-bold mt-4 py-2"
                     onClick={makePayment}

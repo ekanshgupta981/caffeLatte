@@ -27,10 +27,12 @@ export default function ShopPage({ setLoading, addToCart, isLoading }) {
       console.log(error);
     }
   };
+
   useEffect(() => {
     getFilterProductDetails();
   }, [filter]);
   useEffect(() => {
+    setLoading(false);
     window.scrollTo(0, 0);
   }, []);
 
@@ -101,19 +103,19 @@ export default function ShopPage({ setLoading, addToCart, isLoading }) {
                                 className=" Special-button-2 px-4 py-1 font-weight-bold"
                                 onClick={() => addToCart(item)}
                               >
-                                <ToastContainer
-                                  position="top-center"
-                                  autoClose={3000}
-                                  hideProgressBar
-                                  newestOnTop={false}
-                                  closeOnClick
-                                  rtl={false}
-                                  pauseOnFocusLoss
-                                  draggable
-                                  pauseOnHover
-                                />
                                 Add To Cart
                               </button>
+                              <ToastContainer
+                                position="top-center"
+                                autoClose={3000}
+                                hideProgressBar
+                                newestOnTop={false}
+                                closeOnClick
+                                rtl={false}
+                                pauseOnFocusLoss
+                                draggable
+                                pauseOnHover
+                              />
                             </p>
                           </div>
                         </div>
