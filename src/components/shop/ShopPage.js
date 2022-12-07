@@ -12,7 +12,7 @@ export default function ShopPage({ setLoading, addToCart, isLoading }) {
   let filter = {};
   console.log(filter);
   let getFilterProductDetails = async () => {
-    let URL = "https://caffelatte-api.herokuapp.com/api/filter";
+    let URL = "https://caffe-latte-api.vercel.app/api/filter";
     try {
       let response = await axios.post(URL, filter);
       let { result, status } = response.data;

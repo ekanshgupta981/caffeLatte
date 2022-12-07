@@ -44,7 +44,7 @@ export default function ProductDetailsPage({ addToCart }) {
       return false;
     }
 
-    let URL = "https://caffelatte-api.herokuapp.com/api/payment";
+    let URL = "https://caffe-latte-api.vercel.app/api/payment";
     let sendData = {
       amount: productsDetails.price,
       email: "ekanshgurmon@gmail.com",
@@ -62,7 +62,7 @@ export default function ProductDetailsPage({ addToCart }) {
       image: "../images/assets/apple-icon-120x120.png",
       order_id: order.id,
       handler: async function (response) {
-        let URL = "https://caffelatte-api.herokuapp.com/api/callback";
+        let URL = "https://caffe-latte-api.vercel.app/api/callback";
         let sendData = {
           payment_id: response.razorpay_payment_id,
           order_id: response.razorpay_order_id,
@@ -93,7 +93,7 @@ export default function ProductDetailsPage({ addToCart }) {
 
   let getProductDetails = async () => {
     let URL =
-      "https://caffelatte-api.herokuapp.com/api/get-product-by-id/" + params.id;
+      "https://caffe-latte-api.vercel.app/api/get-product-by-id/" + params.id;
     try {
       let response = await axios.get(URL);
       let data = response.data;

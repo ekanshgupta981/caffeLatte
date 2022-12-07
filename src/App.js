@@ -48,7 +48,7 @@ function App() {
     }
   };
   let getProductDetails = async () => {
-    let URL = "https://caffelatte-api.herokuapp.com/api/get-products";
+    let URL = "https://caffe-latte-api.vercel.app/api/get-products";
     try {
       let response = await axios.get(URL);
       let { Products, status } = response.data;
