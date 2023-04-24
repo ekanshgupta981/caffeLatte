@@ -91,37 +91,37 @@ export default function FilterBar({ filterProducts, filter }) {
             </div>
             {/* ===== filter ===== */}
             <div className="col-lg-6 col-12 mt-lg-0 mt-2 d-flex align-items-center flex-wrap">
-              <button
-                className="btn btn-outline-light px-3 mt-2 mx-2 fs-5 "
-                data-bs-toggle="modal"
-                data-bs-target="#exampleModal"
-              >
-                <i className="fa fa-tasks" aria-hidden="true"></i> Filters
-              </button>
-              <form action="">
-                <div
-                  className="modal fade"
-                  id="exampleModal"
-                  tabIndex="-1"
-                  aria-labelledby="exampleModalLabel"
-                  aria-hidden="true"
-                >
-                  <div className="modal-dialog modal-lg mt-5">
-                    <div className="modal-content">
-                      <div className="modal-header">
-                        <h5
-                          className="modal-title text-dark fs-3"
-                          id="exampleModalLabel"
-                        >
-                          Filters
-                        </h5>
-                        <button
-                          type="button"
-                          className="btn-close"
-                          data-bs-dismiss="modal"
-                          aria-label="Close"
-                        ></button>
-                      </div>
+//               <button
+//                 className="btn btn-outline-light px-3 mt-2 mx-2 fs-5 "
+//                 data-bs-toggle="modal"
+//                 data-bs-target="#exampleModal"
+//               >
+//                 <i className="fa fa-tasks" aria-hidden="true"></i> Filters
+//               </button>
+//               <form action="">
+//                 <div
+//                   className="modal fade"
+//                   id="exampleModal"
+//                   tabIndex="-1"
+//                   aria-labelledby="exampleModalLabel"
+//                   aria-hidden="true"
+//                 >
+//                   <div className="modal-dialog modal-lg mt-5">
+//                     <div className="modal-content">
+//                       <div className="modal-header">
+//                         <h5
+//                           className="modal-title text-dark fs-3"
+//                           id="exampleModalLabel"
+//                         >
+//                           Filters
+//                         </h5>
+//                         <button
+//                           type="button"
+//                           className="btn-close"
+//                           data-bs-dismiss="modal"
+//                           aria-label="Close"
+//                         ></button>
+//                       </div>
 
                       {/* ===== Filter toggle ======== */}
 
