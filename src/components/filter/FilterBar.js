@@ -125,62 +125,62 @@ export default function FilterBar({ filterProducts, filter }) {
 
                       {/* ===== Filter toggle ======== */}
 
-                      <section className="d-flex shop-filter-modal">
-                        <div className="col-4 border">
-                          <div className="border-bottom">
-                            <h5
-                              className={
-                                filterToggle === true
-                                  ? "text-dark p-2 py-5 border-start border-4 border-danger mb-0"
-                                  : "text-dark p-2 py-5 border mt-0 mb-0"
-                              }
-                              onClick={() => setFilterToggle(true)}
-                            >
-                              Category
-                            </h5>
-                          </div>
-                          <div className="border-bottom">
-                            <h5
-                              className={
-                                filterToggle === false
-                                  ? "text-dark p-2 py-5 border-start border-4 border-danger mb-0"
-                                  : "text-dark p-2 py-5 border mt-0 mb-0"
-                              }
-                              onClick={() => setFilterToggle(false)}
-                            >
-                              Price Range
-                            </h5>
-                          </div>
-                        </div>
+//                       <section className="d-flex shop-filter-modal">
+//                         <div className="col-4 border">
+//                           <div className="border-bottom">
+//                             <h5
+//                               className={
+//                                 filterToggle === true
+//                                   ? "text-dark p-2 py-5 border-start border-4 border-danger mb-0"
+//                                   : "text-dark p-2 py-5 border mt-0 mb-0"
+//                               }
+//                               onClick={() => setFilterToggle(true)}
+//                             >
+//                               Category
+//                             </h5>
+//                           </div>
+//                           <div className="border-bottom">
+//                             <h5
+//                               className={
+//                                 filterToggle === false
+//                                   ? "text-dark p-2 py-5 border-start border-4 border-danger mb-0"
+//                                   : "text-dark p-2 py-5 border mt-0 mb-0"
+//                               }
+//                               onClick={() => setFilterToggle(false)}
+//                             >
+//                               Price Range
+//                             </h5>
+//                           </div>
+//                         </div>
 
-                        {/* ===== filter content ===== */}
+//                         {/* ===== filter content ===== */}
 
-                        <div className="col-8 text-dark">
-                          {filterToggle === true ? (
-                            <FilterCat filterData={filterData} />
-                          ) : (
-                            <FilterPriceRange filterData={filterData} />
-                          )}
-                        </div>
-                      </section>
-                      <div className="modal-footer">
-                        <input
-                          type="reset"
-                          value="Clear"
-                          className="bg-transparent text-muted border-0 btn"
-                        />
-                        <button
-                          type="button"
-                          className="btn btn-danger px-5"
-                          onClick={() => Apply(apply)}
-                        >
-                          Apply
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </form>
+//                         <div className="col-8 text-dark">
+//                           {filterToggle === true ? (
+//                             <FilterCat filterData={filterData} />
+//                           ) : (
+//                             <FilterPriceRange filterData={filterData} />
+//                           )}
+//                         </div>
+//                       </section>
+//                       <div className="modal-footer">
+//                         <input
+//                           type="reset"
+//                           value="Clear"
+//                           className="bg-transparent text-muted border-0 btn"
+//                         />
+//                         <button
+//                           type="button"
+//                           className="btn btn-danger px-5"
+//                           onClick={() => Apply(apply)}
+//                         >
+//                           Apply
+//                         </button>
+//                       </div>
+//                     </div>
+//                   </div>
+//                 </div>
+//               </form>
               {/* ==== FIlter map === */}
               <div>
                 {veg === "" ? (
