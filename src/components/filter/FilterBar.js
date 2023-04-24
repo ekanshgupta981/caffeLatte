@@ -123,7 +123,7 @@ export default function FilterBar({ filterProducts, filter }) {
 //                         ></button>
 //                       </div>
 
-                      {/* ===== Filter toggle ======== */}
+                      
 
 //                       <section className="d-flex shop-filter-modal">
 //                         <div className="col-4 border">
