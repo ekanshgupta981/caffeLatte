@@ -181,7 +181,7 @@ export default function FilterBar({ filterProducts, filter }) {
 //                   </div>
 //                 </div>
 //               </form>
-              {/* ==== FIlter map === */}
+              
               <div>
                 {veg === "" ? (
                   <button
